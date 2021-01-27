@@ -1,5 +1,10 @@
-body{
+* {
   box-sizing: border-box;
+  /* resets what the width should be */
+}
+
+body{
+  /* box-sizing: border-box; */
   font-family: Sans-Serif;
   font-weight: bold;
   display: inline-block;
@@ -13,7 +18,24 @@ li {
 .octocat img{
   height: 20rem;
   border: solid #CACACA 1px;
-  border-radius: 10px;
+  border-radius: 3px;
+}
+
+.octocat > a {
+  display: inline-block;
+  position: relative;
+}
+.octocat > a::after {
+content: "";
+height: 0;
+width: 0;
+border-top: solid 10px #CACACA;
+border-right: solid 10px transparent;
+border-left: solid 10px transparent;
+position: absolute;
+top: 98.5%;
+right: 1%;
+
 }
 
 .octocat img:hover{
